@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.landomen.mymovies.SearchActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_margin">
+
+        <RelativeLayout
+            android:id="@+id/search_movies_title_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/search_movies_title_edit_text"
+                android:layout_width="@dimen/edit_text_width_long"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:hint="@string/search_hint"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:id="@+id/search_movies_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_movies_title_edit_text"
+                android:layout_centerHorizontal="true"
+                android:text="@string/title"
+                android:textColor="@color/secondaryText"
+                android:textSize="@dimen/text_small" />
+
+        </RelativeLayout>
+
+        <Spinner
+            android:id="@+id/search_movies_year_spinner"
+            android:layout_width="@dimen/edit_text_width_long"
+            android:layout_height="@dimen/bottom_toolbar_height"
+            android:layout_below="@+id/search_movies_title_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_side_normal"
+            android:background="@color/divider"
+            android:gravity="center"
+            android:popupBackground="@color/secondaryText" />
+
+        <Spinner
+            android:id="@+id/search_movies_genre_spinner"
+            android:layout_width="@dimen/edit_text_width_long"
+            android:layout_height="@dimen/bottom_toolbar_height"
+            android:layout_below="@+id/search_movies_year_spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_side_normal"
+            android:background="@color/divider"
+            android:gravity="center"
+            android:popupBackground="@color/secondaryText" />
+
+        <Button
+            android:id="@+id/search_movies_search_button"
+            style="@style/BasicButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_movies_genre_spinner"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/space_side_normal"
+            android:text="@string/search" />
+
+    </RelativeLayout>
+
+
+</ScrollView>
